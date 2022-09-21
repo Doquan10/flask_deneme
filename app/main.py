@@ -1,5 +1,5 @@
 from flask import Flask
-import pickle
+from flask import pickle
 
 model = pickle.load(open('model.sav','rb'))
 app = Flask(__name__)
