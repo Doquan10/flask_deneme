@@ -1,6 +1,5 @@
-from flask import Flask,request,jsonify
-import numpy as np
-import pickle
+from flask import Flask
+
 model = pickle.load(open('model.sav','rb'))
 app = Flask(__name__)
 @app.route('/')
