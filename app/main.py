@@ -34,7 +34,7 @@ def predict():
     filename = 'finalized_model.pkl'
     loaded_model = joblib.load(filename)
     result = loaded_model.predict(df2)
-    return jsonify({'placement':str(result)})
+    return jsonify({'placement':int(result)})
     #print(result)
 if __name__ == '__main__':
     app.run(debug=True)
