@@ -31,7 +31,7 @@ def predict():
 
 
 
-    filename = 'finalized_model.pkl'
+    filename = 'xgb.pkl'
     loaded_model = joblib.load(filename)
     result = loaded_model.predict(df2)
     return jsonify({'placement':str(result)})
