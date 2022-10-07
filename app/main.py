@@ -9,7 +9,7 @@ def index():
     return "Hello world"
 @app.route('/predict',methods=['POST'])    
 def predict():
-    df = pd.DataFrame(columns=['OPERASYON SAYISI','KAMLI DELİK','TOPLAM AĞIRLIK',
+    df = pd.DataFrame(columns=['OPERASYON SAYISI','KAMLI DELİK','ZORLUK KATSAYISI','TOPLAM AĞIRLIK',
                            'KALIP TİPİ_0','KALIP TİPİ_1','KALIP TİPİ_2','KALIP TİPİ_3'])
 
 
