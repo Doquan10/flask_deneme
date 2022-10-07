@@ -22,7 +22,7 @@ def predict():
     kalip_tipi2=0
     kalip_tipi3=3
  
-    df2 = df.append({'OPERASYON SAYISI' : operasyon_sayisi, 'KAMLI DELİK' : kamli_delik,'ZORLUK KATSAYISI'=zorluk_katsayisi, 'TOPLAM AĞIRLIK' : toplam_agirlik,
+    df2 = df.append({'OPERASYON SAYISI' : operasyon_sayisi, 'KAMLI DELİK' : kamli_delik,'ZORLUK KATSAYISI' : zorluk_katsayisi, 'TOPLAM AĞIRLIK' : toplam_agirlik,
                 'KALIP TİPİ_0' : kalip_tipi0, 'KALIP TİPİ_1' : kalip_tipi1, 'KALIP TİPİ_2' : kalip_tipi2, 'KALIP TİPİ_3' : kalip_tipi3}, ignore_index = True)
 
 
