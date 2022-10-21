@@ -9,8 +9,8 @@ def index():
     return "Hello world"
 @app.route('/predict',methods=['POST'])    
 def predict():
-    df = pd.DataFrame(columns=['OPERASYON SAYISI','KAMLI DELİK','ZORLUK KATSAYISI','TOPLAM AĞIRLIK',
-                           'KALIP TİPİ_0','KALIP TİPİ_1','KALIP TİPİ_2','KALIP TİPİ_3'])
+    df = pd.DataFrame(columns=['OPERASYON SAYISI','KAMLI DELİK','TOPLAM AĞIRLIK',
+                           'KALIP TİPİ_0','KALIP TİPİ_1','KALIP TİPİ_2','KALIP TİPİ_3','OEM_0','OEM_1','OEM_2','OEM_3'])
 
 
     operasyon_sayisi=request.form.get('akma')
@@ -22,8 +22,9 @@ def predict():
     kalip_tipi2=0
     kalip_tipi3=3
  
-    df2 = df.append({'OPERASYON SAYISI' : operasyon_sayisi, 'KAMLI DELİK' : kamli_delik,'ZORLUK KATSAYISI' : zorluk_katsayisi, 'TOPLAM AĞIRLIK' : toplam_agirlik,
-                'KALIP TİPİ_0' : kalip_tipi0, 'KALIP TİPİ_1' : kalip_tipi1, 'KALIP TİPİ_2' : kalip_tipi2, 'KALIP TİPİ_3' : kalip_tipi3}, ignore_index = True)
+    df2 = df.append({'OPERASYON SAYISI' : operasyon_sayisi, 'KAMLI DELİK' : kamli_delik,'TOPLAM AĞIRLIK' : toplam_agirlik,
+                'KALIP TİPİ_0' : kalip_tipi0, 'KALIP TİPİ_1' : kalip_tipi1, 'KALIP TİPİ_2' : kalip_tipi2, 'KALIP TİPİ_3' : kalip_tipi3,
+                'OEM_0' : 0, 'OEM_1' : 1, 'OEM_2' : 0, 'OEM_3' : 0}, ignore_index = True)
 
 
 
